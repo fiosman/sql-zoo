@@ -5,3 +5,8 @@
 -- Timor-Leste	1066409
 
 SELECT "name", "population" FROM "world" WHERE "population" BETWEEN 1000000 AND 1250000;
+
+-- write query that fetches all records that match start with "Al". 
+-- Return the name and population columns.
+
+SELECT "name", "population" FROM "world" WHERE "name" LIKE 'Al%';

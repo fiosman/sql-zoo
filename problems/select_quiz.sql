@@ -10,3 +10,8 @@ SELECT "name", "population" FROM "world" WHERE "population" BETWEEN 1000000 AND 
 -- Return the name and population columns.
 
 SELECT "name", "population" FROM "world" WHERE "name" LIKE 'Al%';
+
+-- write query to show which countries end in 'A' or 'L'
+-- return the column only.
+
+SELECT "name" FROM "world" WHERE "name" LIKE '%a' OR "name" LIKE '%l';

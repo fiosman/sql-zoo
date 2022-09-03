@@ -15,3 +15,8 @@ SELECT "name", "population" FROM "world" WHERE "name" LIKE 'Al%';
 -- return the column only.
 
 SELECT "name" FROM "world" WHERE "name" LIKE '%a' OR "name" LIKE '%l';
+
+-- write a query to show countries with an area larger than 50000 
+-- and a population less than 10000000. Return the name, area and popualation.
+
+SELECT "name", "area", "population" FROM "world" WHERE 'area' > 50000 AND 'population' < 10000000;

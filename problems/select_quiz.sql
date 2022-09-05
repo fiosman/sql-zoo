@@ -20,3 +20,7 @@ SELECT "name" FROM "world" WHERE "name" LIKE '%a' OR "name" LIKE '%l';
 -- and a population less than 10000000. Return the name, area and popualation.
 
 SELECT "name", "area", "population" FROM "world" WHERE 'area' > 50000 AND 'population' < 10000000;
+
+-- write a query to show the population density of China, Australia, Nigeria and France 
+
+SELECT "name", "population"/"area" AS "population_density" WHERE "name" IN('China', 'Australia', 'Nigeria', 'France');

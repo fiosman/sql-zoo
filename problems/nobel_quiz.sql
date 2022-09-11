@@ -12,3 +12,7 @@ SELECT COUNT("subject") FROM "nobel" WHERE "subject" = 'Chemistry' AND "yr" BETW
 -- no medicine awards were given
 
 SELECT COUNT("yr") FROM "nobel" WHERE "subject" != 'Medicine';
+
+-- write a query to return winners with names starting with Sir and yr starting with 196. 
+
+SELECT "subject", "winner" FROM "nobel" WHERE "winner" LIKE 'Sir%' AND "yr" LIKE '196%';

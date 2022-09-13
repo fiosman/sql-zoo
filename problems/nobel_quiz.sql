@@ -20,3 +20,8 @@ SELECT "subject", "winner" FROM "nobel" WHERE "winner" LIKE 'Sir%' AND "yr" LIKE
 -- write a query that shows which year neither a phsyics or chemistry award was given. 
 
 SELECT "yr" FROM "nobel" WHERE "subject" NOT IN ('Chemistry', 'Physics');
+
+-- write a query that returns the years when a medicine award was given but no peace or literaure award was 
+
+SELECT DISTINCT "yr" FROM "nobel" WHERE "subject" = 'Medicine' AND "subject" NOT IN ('Literature', 'Peace');
+ 

@@ -25,6 +25,10 @@ SELECT "yr" FROM "nobel" WHERE "subject" NOT IN ('Chemistry', 'Physics');
 
 SELECT DISTINCT "yr" FROM "nobel" WHERE "subject" = 'Medicine' AND "subject" NOT IN ('Literature', 'Peace');
  
- -- write a query that returns the number of each award given in the year 1960
+-- write a query that returns the number of each award given in the year 1960
 
- SELECT "subject", COUNT("subject") FROM "nobel" WHERE "yr" = '1960' GROUP BY "subject"; 
+SELECT "subject", COUNT("subject") FROM "nobel" WHERE "yr" = '1960' GROUP BY "subject"; 
+
+-- write a query to return the sum of population of all countries in Europe 
+
+SELECT SUM("population") AS "european_countries_pop" FROM "bbc" WHERE "region" = 'Europe';

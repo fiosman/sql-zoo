@@ -32,3 +32,7 @@ SELECT "subject", COUNT("subject") FROM "nobel" WHERE "yr" = '1960' GROUP BY "su
 -- write a query to return the sum of population of all countries in Europe 
 
 SELECT SUM("population") AS "european_countries_pop" FROM "bbc" WHERE "region" = 'Europe';
+
+-- write a query to return the number of countries with a population smalelr than 150000
+
+SELECT COUNT("id") FROM "bbc" WHERE population < 150000;

@@ -35,4 +35,4 @@ SELECT SUM("population") AS "european_countries_pop" FROM "bbc" WHERE "region" =
 
 -- write a query to return the number of countries with a population smalelr than 150000
 
-SELECT COUNT("id") FROM "bbc" WHERE population < 150000;
+SELECT COUNT("id") FROM "bbc" WHERE "population" < 150000;

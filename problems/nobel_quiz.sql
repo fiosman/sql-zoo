@@ -40,3 +40,7 @@ SELECT COUNT("id") FROM "bbc" WHERE "population" < 150000;
 -- write a query to return all regions that have area greater than 15000000; return the region and its total area. 
 
 SELECT * FROM (SELECT "region", SUM("area") as "total_area" FROM "bbc" GROUP BY "region") AS "result" WHERE "total_area" > 15000000;
+
+-- write a query to return the average population of poland, germany and denmark 
+
+SELECT AVG("population") FROM "bbc" WHERE "name" IN ('Poland', 'Germany', 'Denmark');

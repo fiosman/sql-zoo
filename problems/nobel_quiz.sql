@@ -44,3 +44,7 @@ SELECT * FROM (SELECT "region", SUM("area") as "total_area" FROM "bbc" GROUP BY 
 -- write a query to return the average population of poland, germany and denmark 
 
 SELECT AVG("population") FROM "bbc" WHERE "name" IN ('Poland', 'Germany', 'Denmark');
+
+-- write a query to return the medium population density of each region 
+
+SELECT "region", SUM("population")/SUM("area") as "pop_density" FROM "bbc" GROUP BY "region";

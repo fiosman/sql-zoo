@@ -48,3 +48,5 @@ SELECT AVG("population") FROM "bbc" WHERE "name" IN ('Poland', 'Germany', 'Denma
 -- write a query to return the medium population density of each region 
 
 SELECT "region", SUM("population")/SUM("area") AS "pop_density" FROM "bbc" GROUP BY "region";
+
+-- write a query to return the name and population density of the country with the largest population;

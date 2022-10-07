@@ -78,8 +78,8 @@ SELECT "region", SUM("population")/SUM("area") AS "pop_density" FROM "bbc" GROUP
 
 -- write a query to return the name and population density of the country with the largest population;
 
- SELECT "name", "population"/"area" AS "pop_density" FROM "bbc" WHERE "population" = (SELECT MAX("population") FROM "bbc");
+SELECT "name", "population"/"area" AS "pop_density" FROM "bbc" WHERE "population" = (SELECT MAX("population") FROM "bbc");
 
- -- write a query to return all regions with minimum total area of 2000000 
+-- write a query to return all regions with minimum total area of 2000000 
 
-select "region", SUM("area") AS "total_area" FROM "bbc" GROUP BY "region" HAVING SUM(area) > 2000000;
+SELECT "region", SUM("area") AS "total_area" FROM "bbc" GROUP BY "region" HAVING SUM(area) > 2000000;

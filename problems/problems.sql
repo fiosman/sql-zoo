@@ -83,3 +83,9 @@ SELECT "name", "population"/"area" AS "pop_density" FROM "bbc" WHERE "population
 -- write a query to return all regions with minimum total area of 2000000 
 
 SELECT "region", SUM("area") AS "total_area" FROM "bbc" GROUP BY "region" HAVING SUM(area) > 2000000;
+
+-- write a query to return the name, region, and population of the smallest country in each region
+
+-- write a query to return the countries belonging to regions with all populations over 50000 
+
+-- write a query to return the countries with a less than a third of the population of the countries around it 

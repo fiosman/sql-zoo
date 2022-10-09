@@ -86,6 +86,8 @@ SELECT "region", SUM("area") AS "total_area" FROM "bbc" GROUP BY "region" HAVING
 
 -- write a query to return the name, region, and population of the smallest country in each region
 
+SELECT "name", "region", "population" FROM "bbc" AS "R" WHERE "population" = (SELECT MIN("population") FROM "bbc" WHERE "region" = "R"."region");
+
 -- write a query to return the countries belonging to regions with all populations over 50000 
 
 -- write a query to return the countries with a less than a third of the population of the countries around it 

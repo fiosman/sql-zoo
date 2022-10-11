@@ -71,4 +71,4 @@ SELECT "name", "region", "population" FROM "bbc" AS "R" WHERE "population" = (SE
 -- write a query to return the countries belonging to regions with all populations over 5000000
 
 -- write a query to return the countries with a less than a third of the population of the countries around it 
-SELECT "name" FROM "bbc" AS "R" WHERE "population" < (SELECT SUM("population") * 0.3 FROM "bbc" WHERE "region" = "R"."region");
+SELECT "name" FROM "bbc" AS "R" WHERE "population" < (SELECT SUM("population") * 0.3 FROM "bbc" WHERE "region" = "R"."region" AND "name" != "R"."name");

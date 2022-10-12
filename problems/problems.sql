@@ -72,3 +72,9 @@ SELECT "name", "region", "population" FROM "bbc" AS "R" WHERE "population" = (SE
 
 -- write a query to return the countries with a less than a third of the population of the countries around it 
 SELECT "name" FROM "bbc" AS "R" WHERE "population" < (SELECT SUM("population") * 0.3 FROM "bbc" WHERE "region" = "R"."region" AND "name" != "R"."name");
+
+-- write a query to return countries that have a bigger population than the UK and are in Europe.
+
+-- write a query to return the countries with greater GDP than any country in Africa. 
+
+-- write a query to return countries with population smaller than Russia but bigger than Denmark. 

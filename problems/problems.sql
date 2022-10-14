@@ -77,5 +77,6 @@ SELECT "name" FROM "bbc" AS "R" WHERE "population" < (SELECT SUM("population") *
 SELECT "name" FROM "bbc" WHERE "region" = (SELECT "region" FROM "bbc" WHERE "name" = 'United Kingdom') AND "population" > (SELECT "population" FROM "bbc" WHERE "name" = 'United Kingdom'); 
 
 -- write a query to return the countries with greater GDP than any country in Africa. 
+SELECT "name" FROM "bbc" WHERE "gdp" > (SELECT MAX("gdp") FROM "bbc" WHERE "region" = 'Africa');
 
 -- write a query to return countries with population smaller than Russia but bigger than Denmark. 

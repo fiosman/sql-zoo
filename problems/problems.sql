@@ -80,3 +80,4 @@ SELECT "name" FROM "bbc" WHERE "region" = (SELECT "region" FROM "bbc" WHERE "nam
 SELECT "name" FROM "bbc" WHERE "gdp" > (SELECT MAX("gdp") FROM "bbc" WHERE "region" = 'Africa');
 
 -- write a query to return countries with population smaller than Russia but bigger than Denmark. 
+SELECT "name" FROM "bbc" WHERE "population" < (SELECT "population" FROM "bbc" WHERE "name" = 'Russia') AND "population" > (SELECT "population" FROM "bbc" WHERE "name" = 'Denmark');

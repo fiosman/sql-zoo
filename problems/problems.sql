@@ -85,3 +85,9 @@ SELECT "name" FROM "bbc" WHERE "population" < (SELECT "population" FROM "bbc" WH
 
 -- write a query to return countries that have bigger population than all countries within Europe. 
 SELECT "name" FROM "bbc" WHERE "population" > (SELECT MAX("population") FROM "bbc" WHERE "region" = 'Europe');
+
+-- write a query to find the stadium where player 'Dimitris Salpingidis' scored.
+
+-- write a query to join goal and eteam tables together. 
+
+-- write a query that shows which players, their team and the amount of goals they scored against greece. 

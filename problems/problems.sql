@@ -89,5 +89,6 @@ SELECT "name" FROM "bbc" WHERE "population" > (SELECT MAX("population") FROM "bb
 -- write a query to find the stadium where player 'Dimitris Salpingidis' scored.
 
 -- write a query to join goal and eteam tables together. 
+SELECT "goal"."id", "teamname", "coach", "teamid", "matchid", "player", "gtime" FROM "eteam" JOIN "goal" ON "eteam"."id" = "goal"."teamid";
 
 -- write a query that shows which players, their team and the amount of goals they scored against greece. 

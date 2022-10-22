@@ -87,6 +87,7 @@ SELECT "name" FROM "bbc" WHERE "population" < (SELECT "population" FROM "bbc" WH
 SELECT "name" FROM "bbc" WHERE "population" > (SELECT MAX("population") FROM "bbc" WHERE "region" = 'Europe');
 
 -- write a query to find the stadium where player 'Dimitris Salpingidis' scored.
+SELECT "stadium" FROM "game" JOIN "goal" ON "game"."id" = "goal"."matchid" WHERE "player" = 'Dimitris Salpingidis';
 
 -- write a query to join goal and eteam tables together. 
 SELECT "goal"."id", "teamname", "coach", "teamid", "matchid", "player", "gtime" FROM "eteam" JOIN "goal" ON "eteam"."id" = "goal"."teamid";

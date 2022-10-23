@@ -93,3 +93,7 @@ SELECT "stadium" FROM "game" JOIN "goal" ON "game"."id" = "goal"."matchid" WHERE
 SELECT "goal"."id", "teamname", "coach", "teamid", "matchid", "player", "gtime" FROM "eteam" JOIN "goal" ON "eteam"."id" = "goal"."teamid";
 
 -- write a query that shows which players, their team and the amount of goals they scored against greece. 
+SELECT "player", "teamname", COUNT("player") AS "goals" FROM "goal" 
+JOIN "game" ON "goal"."matchid" = "game"."id" 
+JOIN "eteam" ON "eteam"."id" = "goal"."teamid" 
+WHERE ("game"."team1" = 4 OR "game"."team2" = 4) AND "goal"."teamid" != 4 GROUP BY "goal"."player", "eteam"."teamname";

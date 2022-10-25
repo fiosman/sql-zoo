@@ -99,5 +99,9 @@ JOIN "eteam" ON "eteam"."id" = "goal"."teamid"
 WHERE ("game"."team1" = 4 OR "game"."team2" = 4) AND "goal"."teamid" != 4 GROUP BY "goal"."player", "eteam"."teamname";
 
 -- write a query to return the goals taht were scored on 9 june 2012. return the teams that scored them and the match date. 
+SELECT "teamname", "mdate" FROM "goal"
+JOIN "game" ON ("goal"."matchid" = "game"."id") 
+JOIN "eteam" ON ("goal"."teamid" = "eteam"."id")
+WHERE "game"."mdate" = '9 June 2012';
 
 -- write a query to return the players and their team who scored against poland in national stadium, warsaw. 

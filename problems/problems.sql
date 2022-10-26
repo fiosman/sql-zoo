@@ -105,3 +105,7 @@ JOIN "eteam" ON ("goal"."teamid" = "eteam"."id")
 WHERE "game"."mdate" = '9 June 2012';
 
 -- write a query to return the players and their team who scored against poland in national stadium, warsaw. 
+
+-- write a query to return the players, their team and the time they scored in Stadion Miejski but not against Italy. 
+
+-- write a query to return the teams that scored less than 3 goals.

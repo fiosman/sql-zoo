@@ -113,3 +113,6 @@ WHERE "goal"."teamid" != 1 AND ("game"."team1" = 1 OR "game"."team2" = 1) AND "g
 -- write a query to return the players, their team and the time they scored in Stadion Miejski but not against Italy. 
 
 -- write a query to return the teams that scored less than 3 goals.
+SELECT "teamname", COUNT("goal"."id") FROM "goal" 
+JOIN "eteam" ON "goal"."teamid" = "eteam"."id" 
+GROUP BY "eteam"."teamname" HAVING COUNT("goal"."id") < 3;

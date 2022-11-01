@@ -111,6 +111,12 @@ JOIN "eteam" ON "eteam"."id" = "goal"."teamid"
 WHERE "goal"."teamid" != 1 AND ("game"."team1" = 1 OR "game"."team2" = 1) AND "game"."stadium" = 'National Stadium, Warsaw';
 
 -- write a query to return the players, their team and the time they scored in Stadion Miejski but not against Italy. 
+SELECT "player"m "teamname" FROM "goal"
+JOIN "game" ON "goal"."matchid" = "game"."id" 
+JOIN "eteam" ON "goal"."teamid" = "eteam"."id"
+WHERE "stadium" = 'Stadion Miejski (Wroclaw)' 
+AND (("goal"."teamid" = "game"."team1" AND "game"."team1" != 5) 
+OR ("goal"."teamid" = "game"."team2" AND "game"."team2" != 5)) 
 
 -- write a query to return the teams that scored less than 3 goals.
 SELECT "teamname", COUNT("goal"."id") FROM "goal" 

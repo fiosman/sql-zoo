@@ -123,7 +123,7 @@ SELECT "teamname", COUNT("goal"."id") FROM "goal"
 JOIN "eteam" ON "goal"."teamid" = "eteam"."id" 
 GROUP BY "eteam"."teamname" HAVING COUNT("goal"."id") < 3;
 
--- write a query to return the directions of the movies which have caused financial losses (gross < budget)
+-- write a query to return the directors of the movies which have caused financial losses (gross < budget)
 
 -- write a query to join three tables together 
 

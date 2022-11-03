@@ -126,5 +126,7 @@ GROUP BY "eteam"."teamname" HAVING COUNT("goal"."id") < 3;
 -- write a query to return the directors of the movies which have caused financial losses (gross < budget)
 
 -- write a query to join three tables together 
+SELECT * FROM "casting" JOIN "actor" ON "casting"."actorid" = "actor"."id" 
+JOIN "movie" ON "movie"."id" = "casting"."movieid";
 
 -- write a query that shows the list of actors called 'John' by order of number of movies in which they acted 

@@ -132,3 +132,7 @@ JOIN "movie" ON "movie"."id" = "casting"."movieid";
 -- write a query that shows the list of actors called 'John' by order of number of movies in which they acted 
 
 -- write a query that lists all actors that starred in movies directed by Ridley Scott who has id 351
+
+SELECT "actor"."name" FROM "actor" JOIN "casting" ON "actor"."id" = "casting"."actorid"
+JOIN "movie" ON "casting"."movieid" = "movie"."id" 
+WHERE "movie"."director" = 351;

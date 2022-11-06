@@ -124,6 +124,8 @@ JOIN "eteam" ON "goal"."teamid" = "eteam"."id"
 GROUP BY "eteam"."teamname" HAVING COUNT("goal"."id") < 3;
 
 -- write a query to return the directors of the movies which have caused financial losses (gross < budget)
+SELECT "name" FROM "actor" JOIN "movie" ON "movie"."director" = "actor"."id" 
+WHERE "movie"."gross" < "movie"."budget"; 
 
 -- write a query to join three tables together 
 SELECT * FROM "casting" JOIN "actor" ON "casting"."actorid" = "actor"."id" 

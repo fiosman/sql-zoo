@@ -137,3 +137,6 @@ JOIN "movie" ON "movie"."id" = "casting"."movieid";
 SELECT "actor"."name" FROM "actor" JOIN "casting" ON "actor"."id" = "casting"."actorid"
 JOIN "movie" ON "casting"."movieid" = "movie"."id" 
 WHERE "movie"."director" = 351;
+
+-- write a query to join actor and movie table together 
+SELECT * FROM "actor" JOIN "movie" ON "movie"."director" = "actor"."id";

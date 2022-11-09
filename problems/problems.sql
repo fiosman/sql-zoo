@@ -144,3 +144,4 @@ WHERE "movie"."director" = 351;
 SELECT * FROM "actor" JOIN "movie" ON "movie"."director" = "actor"."id";
 
 -- write a query to return the titles that were starred by Paul Hogan
+SELECT "title" FROM "casting" JOIN "movie" ON "movie"."id" = "casting"."movieid" JOIN "actor" ON "actor"."id" = "casting"."actorid" WHERE "actor"."name" = 'Paul Hogan' AND "casting"."ord" = 1;

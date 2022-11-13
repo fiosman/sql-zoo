@@ -147,4 +147,6 @@ SELECT * FROM "actor" JOIN "movie" ON "movie"."director" = "actor"."id";
 SELECT "title" FROM "casting" JOIN "movie" ON "movie"."id" = "casting"."movieid" JOIN "actor" ON "actor"."id" = "casting"."actorid" WHERE "actor"."name" = 'Paul Hogan' AND "casting"."ord" = 1;
 
 -- write a query to return the list of movies Robert De Niro co-starred in (order = 3); Return the name of the movie and casting order. 
-
+SELECT "title", "ord" FROM "casting" JOIN "movie" ON "movie"."id" = "casting"."movieid" 
+JOIN "actor" ON "actor"."id" = "casting"."actorid"
+WHERE "actor"."name" = 'Robert De Niro' AND "casting"."ord" = 3;

@@ -152,3 +152,9 @@ WHERE "actor"."name" = 'Paul Hogan' AND "casting"."ord" = 1;
 SELECT "title", "ord" FROM "casting" JOIN "movie" ON "movie"."id" = "casting"."movieid" 
 JOIN "actor" ON "actor"."id" = "casting"."actorid"
 WHERE "actor"."name" = 'Robert De Niro' AND "casting"."ord" = 3;
+
+-- write a query to that uses an outer join between teacher and department tables.
+
+-- write a query to return the name of the department that employs Cutflower. 
+
+-- write a query to return a list of all departments and number of employed teachers. 

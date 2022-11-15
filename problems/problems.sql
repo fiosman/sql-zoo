@@ -154,6 +154,7 @@ JOIN "actor" ON "actor"."id" = "casting"."actorid"
 WHERE "actor"."name" = 'Robert De Niro' AND "casting"."ord" = 3;
 
 -- write a query to that uses an outer join between teacher and department tables.
+SELECT * FROM "teacher" FULL OUTER JOIN "dept" ON "dept"."id" = "teacher"."dept";
 
 -- write a query to return the name of the department that employs Cutflower. 
 

@@ -157,5 +157,7 @@ WHERE "actor"."name" = 'Robert De Niro' AND "casting"."ord" = 3;
 SELECT * FROM "teacher" FULL OUTER JOIN "dept" ON "dept"."id" = "teacher"."dept";
 
 -- write a query to return the name of the department that employs Cutflower. 
+SELECT "dept"."name" FROM "teacher" JOIN "dept" ON "teacher"."dept" = "dept"."id" 
+WHERE "teacher"."name" = 'Cutflower';
 
 -- write a query to return a list of all departments and number of employed teachers. 

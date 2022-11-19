@@ -161,4 +161,5 @@ SELECT "dept"."name" FROM "teacher" JOIN "dept" ON "teacher"."dept" = "dept"."id
 WHERE "teacher"."name" = 'Cutflower';
 
 -- write a query to return a list of all departments and number of employed teachers. 
-SELECT "dept"."name", COUNT("teacher"."id") FROM "dept" JOIN "teacher" ON "teacher"."dept" = "dept"."id" GROUP BY "dept"."name";
+SELECT "dept"."name", COUNT("teacher"."id") FROM "dept" JOIN "teacher" ON "teacher"."dept" = "dept"."id" 
+GROUP BY "dept"."name";

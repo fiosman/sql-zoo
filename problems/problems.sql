@@ -163,3 +163,13 @@ WHERE "teacher"."name" = 'Cutflower';
 -- write a query to return a list of all departments and number of employed teachers. 
 SELECT "dept"."name", COUNT("teacher"."id") FROM "dept" JOIN "teacher" ON "teacher"."dept" = "dept"."id" 
 GROUP BY "dept"."name";
+
+-- write a query to return name and digit for teachers with a phone number. 
+SELECT "name", 
+CASE 
+  WHEN "phone" = 2753 THEN 'three'
+  WHEN "phone" = 2754 THEN 'four'
+  WHEN "phone" = 3212 THEN 'two'
+  ELSE 'none'
+END AS "digit"
+FROM "teacher";

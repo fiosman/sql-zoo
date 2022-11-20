@@ -173,3 +173,12 @@ CASE
   ELSE 'none'
 END AS "digit"
 FROM "teacher";
+
+--write a query that returns the name of the teacher and an addition column dept which 
+--evaluates to either computing or other depending on the dept they belong to
+SELECT "name", 
+CASE 
+  WHEN "dept" IN (1) THEN 'Computing'
+  ELSE 'Other'
+END AS 'department'
+FROM "teacher";

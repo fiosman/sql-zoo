@@ -182,3 +182,6 @@ CASE
   ELSE 'Other'
 END AS 'department'
 FROM "teacher";
+
+-- write a query that returns zero if a teacher doesnt have a department and their department if they do. 
+SELECT "name", COALESCE("dept", 0) AS "result" FROM "teacher";

@@ -185,3 +185,9 @@ FROM "teacher";
 
 -- write a query that returns zero if a teacher doesnt have a department and their department if they do. 
 SELECT "name", COALESCE("dept", 0) AS "result" FROM "teacher";
+
+-- write a query that returns the routes to get from Craiglockhart to Haymarket 
+
+-- write a query that shows the stops that are on route.num '2A' which can be reached with one bus from Haymarket
+
+-- write a query that shows which services are available from Tollcross
